@@ -1,0 +1,37 @@
+<div>
+    <h1>Heroes</h1>
+    <input type="text" placeholder="Search Heroes" [(ngModel)]="searchQuery">
+    <ul>
+        <li *ngFor="let hero of heroes | filterHeroesVillains: searchQuery" (click)="showHeroDetails(hero)">
+            {{ hero.name }}
+        </li>
+    </ul>
+</div>
+<div>
+    <h1>Villains</h1>
+    <input type="text" placeholder="Search Villains" [(ngModel)]="searchQuery">
+    <ul>
+        <li *ngFor="let villain of villains | filterHeroesVillains: searchQuery" (click)="showVillainDetails(villain)">
+            {{ villain.name }}
+        </li>
+    </ul>
+</div>
+<div *ngIf="selectedHero">
+    <h1>Hero Details</h1>
+    <img [src]="selectedHero.images.sm" alt="Hero Image">
+    <p>Name: {{ selectedHero.name }}</p>
+    <p>Gender: {{ selectedHero.appearance.gender }}</p>
+    <p>Place Of Birth: {{ selectedHero.biography.placeOfBirth }}</p>
+    <p>Occupation: {{ selectedHero.work.occupation }}</p>
+    <p>Connection: {{ selectedHero.connections.groupAffiliation }}</p>
+</div>
+
+<div *ngIf="selectedVillain">
+    <h1>Hero Details</h1>
+    <img [src]="selectedVillain.images.sm" alt="Hero Image">
+    <p>Name: {{ selectedVillain.name }}</p>
+    <p>Gender: {{ selectedVillain.appearance.gender }}</p>
+    <p>Place Of Birth: {{ selectedVillain.biography.placeOfBirth }}</p>
+    <p>Occupation: {{ selectedVillain.work.occupation }}</p>
+    <p>Connection: {{ selectedVillain.connections.groupAffiliation }}</p>
+</div>
