@@ -2,24 +2,28 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { FilterHeroesVillainsPipe } from './search/filter-heroes-villains.pipe';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './Components/heroes/heroes.component';
-import { HeroDetailComponent } from './Components/hero-detail/hero-detail.component';
+import { VillainsComponent } from './Components/villains/villains.component';
+import { GameComponent } from './Components/game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent,
-    FilterHeroesVillainsPipe
+    FilterHeroesVillainsPipe,
+    VillainsComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

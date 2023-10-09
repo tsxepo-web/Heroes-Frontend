@@ -1,0 +1,18 @@
+<ng-container *ngIf="villains.length > 0">
+  <div>
+      <carousel [itemsPerSlide]="itemsPerSlide"
+                [singleSlideOffset]="singleSlideOffset"
+                [noWrap]="noWrap"
+                [interval]="0"
+                [startFromIndex]="5"
+                >
+        <slide *ngFor="let villain of villains; let index=index">
+          <img [src]="villain.images.sm" alt="image slide" style="display: block; width: 70%;">
+          <div class="carousel-caption">
+            <h4>{{ villain.name }}</h4>
+            <button (click)="selectVillain(villain)">Select</button>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+</ng-container>

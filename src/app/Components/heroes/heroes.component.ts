@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, QueryList, ViewChild } from '@angular/core';
 import { HeroesService } from 'src/app/Services/heroes.service';
 
 @Component({
@@ -7,26 +7,27 @@ import { HeroesService } from 'src/app/Services/heroes.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
+  @Output() heroSelected: EventEmitter<any> = new EventEmitter<any>();
   heroes: any[] = [];
-  villains: any[] = [];
-  selectedHero: any = null;
-  selectedVillain: any = null;
-  searchQuery: string = '';
+  itemsPerSlide = 3;
+  singleSlideOffset = false;
+  selectedHero: any; 
+  noWrap = false;
+
 
   constructor(private heroesService: HeroesService) {}
 
   ngOnInit(): void {
     this.heroesService.getHeroes().subscribe((result) => {
-      this.heroes = result.filter((hero:any) => hero.biography.alignment === 'good');
-      this.villains = result.filter((villain:any) => villain.biography.alignment === 'bad');
+      this.heroes = result.filter((hero:any) =>
+        hero.biography.alignment === 'good');
     });
   }
-  showHeroDetails(hero: any): void {
-    this.selectedHero = hero;
-    this.selectedHero = null;
+  selectHero(hero: any) {
+    this.heroSelected.emit(hero);
   }
-  showVillainDetails(villain: any): void {
-    this.selectedVillain = villain;
-    this.selectedVillain = null;
+
+  resetGame() {
+    this.selectedHero = null;
   }
 }
