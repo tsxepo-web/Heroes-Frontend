@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './Components/heroes/heroes.component';
 import { VillainsComponent } from './Components/villains/villains.component';
 import { GameComponent } from './Components/game/game.component';
+import { BannerComponent } from './Components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GameComponent } from './Components/game/game.component';
     HeroesComponent,
     FilterHeroesVillainsPipe,
     VillainsComponent,
-    GameComponent
+    GameComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
