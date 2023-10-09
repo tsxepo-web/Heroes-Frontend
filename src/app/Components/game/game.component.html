@@ -9,10 +9,10 @@
       <button (click)="verifyVillain()">Verify Villain</button>
     </div>
   
-    <div *ngIf="heroSelected && villainSelected">
+    <div *ngIf="heroSelected && villainSelected" class="battle">
         <h1>Battle Results</h1>
-        <p>Selected Hero: {{ selectedHero.name }}</p>
-        <p>Selected Villain: {{ selectedVillain.name }}</p>
+        <img [src]="selectedHero.images.sm" alt="">
+        <img [src]="selectedVillain.images.sm" alt="">
     </div>
   </div>
   

@@ -9,7 +9,7 @@ import { HeroesService } from 'src/app/Services/heroes.service';
 export class HeroesComponent implements OnInit {
   @Output() heroSelected: EventEmitter<any> = new EventEmitter<any>();
   heroes: any[] = [];
-  itemsPerSlide = 3;
+  itemsPerSlide = 5;
   singleSlideOffset = false;
   selectedHero: any; 
   noWrap = false;

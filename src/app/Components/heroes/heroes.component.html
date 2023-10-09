@@ -5,8 +5,10 @@
             [interval]="0"
             [startFromIndex]="5"
             >
-    <slide *ngFor="let hero of heroes; let index=index">
-      <img [src]="hero.images.sm" alt="image slide" style="display: block; width: 70%;">
+    <slide *ngFor="let hero of heroes; let index=index" class="custom-slide">
+      <div class="content">
+        <img [src]="hero.images.sm" alt="image slide" style="display: block; width: 80%;">
+      </div>
       <div class="carousel-caption">
         <h4>{{ hero.name }}</h4>
         <button (click)="selectHero(hero)">Select</button>

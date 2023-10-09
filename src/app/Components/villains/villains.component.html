@@ -6,8 +6,10 @@
                 [interval]="0"
                 [startFromIndex]="5"
                 >
-        <slide *ngFor="let villain of villains; let index=index">
-          <img [src]="villain.images.sm" alt="image slide" style="display: block; width: 70%;">
+        <slide *ngFor="let villain of villains; let index=index" class="custom-slide">
+          <div class="content">
+            <img [src]="villain.images.sm" alt="image slide" style="display: block; width: 80%;">
+          </div>
           <div class="carousel-caption">
             <h4>{{ villain.name }}</h4>
             <button (click)="selectVillain(villain)">Select</button>
