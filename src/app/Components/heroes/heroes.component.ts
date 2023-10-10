@@ -11,7 +11,8 @@ export class HeroesComponent implements OnInit {
   heroes: any[] = [];
   itemsPerSlide = 5;
   singleSlideOffset = false;
-  selectedHero: any; 
+  selectedHero: any = null; 
+  prevSelectedHero: any = null;
   noWrap = false;
 
 
@@ -24,6 +25,7 @@ export class HeroesComponent implements OnInit {
     });
   }
   selectHero(hero: any) {
+    this.prevSelectedHero = this.selectedHero;
     this.heroSelected.emit(hero);
   }
 

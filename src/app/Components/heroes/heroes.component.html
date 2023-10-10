@@ -6,12 +6,9 @@
             [startFromIndex]="5"
             >
     <slide *ngFor="let hero of heroes; let index=index" class="custom-slide">
-      <div class="content">
-        <img [src]="hero.images.sm" alt="image slide" style="display: block; width: 80%;">
-      </div>
-      <div class="carousel-caption">
-        <h4>{{ hero.name }}</h4>
-        <button (click)="selectHero(hero)">Select</button>
+      <div class="content" (click)="selectHero(hero)">
+        <img class="image" [src]="hero.images.sm" alt="image slide">
+        <h4 class="carousel-caption">{{ hero.name }}</h4>
       </div>
     </slide>
   </carousel>
