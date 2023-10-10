@@ -13,11 +13,12 @@ export class BannerComponent {
 
   selectHero(hero: any) {
     this.selectedHero = hero;
-    console.log('Selected Hero:', this.selectedHero);
+    this.heroSelected = true;
   }
 
   selectVillain(villain: any) {
     this.selectedVillain = villain;
+    this.villainSelected = true;
   }
 
   verifyHero() {

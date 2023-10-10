@@ -1,15 +1,10 @@
 <div *ngIf="heroes.length > 0">
-  <carousel [itemsPerSlide]="itemsPerSlide"
-            [singleSlideOffset]="singleSlideOffset"
-            [noWrap]="noWrap"
-            [interval]="0"
-            [startFromIndex]="5"
-            >
-    <slide *ngFor="let hero of heroes; let index=index" class="custom-slide">
-      <div class="content" (click)="selectHero(hero)">
-        <img class="image" [src]="hero.images.sm" alt="image slide">
-        <h4 class="carousel-caption">{{ hero.name }}</h4>
+  <input type="text" placeholder="Search Heroes" [(ngModel)]="searchQuery" (input)="filterHeroes()">
+  <ul>
+    <li *ngFor="let hero of filteredHeroes">
+      <div (click)="selectHero(hero)">
+        {{ hero.name }}
       </div>
-    </slide>
-  </carousel>
+    </li>
+  </ul>
 </div>

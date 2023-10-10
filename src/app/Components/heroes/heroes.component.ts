@@ -9,12 +9,9 @@ import { HeroesService } from 'src/app/Services/heroes.service';
 export class HeroesComponent implements OnInit {
   @Output() heroSelected: EventEmitter<any> = new EventEmitter<any>();
   heroes: any[] = [];
-  itemsPerSlide = 5;
-  singleSlideOffset = false;
   selectedHero: any = null; 
-  prevSelectedHero: any = null;
-  noWrap = false;
-
+  searchQuery: string = '';
+  filteredHeroes: any[] = [];
 
   constructor(private heroesService: HeroesService) {}
 
@@ -25,11 +22,11 @@ export class HeroesComponent implements OnInit {
     });
   }
   selectHero(hero: any) {
-    this.prevSelectedHero = this.selectedHero;
     this.heroSelected.emit(hero);
   }
-
-  resetGame() {
-    this.selectedHero = null;
+  filterHeroes() {
+      this.filteredHeroes = this.heroes.filter((hero) =>
+      hero.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
   }
 }

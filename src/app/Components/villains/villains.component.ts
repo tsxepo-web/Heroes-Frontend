@@ -9,11 +9,8 @@ import { HeroesService } from 'src/app/Services/heroes.service';
 export class VillainsComponent implements OnInit {
   @Output() villainSelected: EventEmitter<any> = new EventEmitter<any>();
   villains: any[] = [];
-  itemsPerSlide = 5;
-  singleSlideOffset = false;
-  selectedVillain: any;
-  noWrap = false;
-
+  searchQuery: string = '';
+  filteredVillains: any[] = [];
 
   constructor(private heroesService: HeroesService) {}
 
@@ -23,12 +20,12 @@ export class VillainsComponent implements OnInit {
         villain.biography.alignment === 'bad');
     });
   }
-
   selectVillain(villain: any) {
     this.villainSelected.emit(villain);
   }
-
-  resetGame() {
-    this.selectedVillain = null;
+  filterVillains() {
+      this.filteredVillains = this.villains.filter((villain) =>
+      villain.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
   }
 }

@@ -1,17 +1,10 @@
-<ng-container *ngIf="villains.length > 0">
-  <div>
-      <carousel [itemsPerSlide]="itemsPerSlide"
-                [singleSlideOffset]="singleSlideOffset"
-                [noWrap]="noWrap"
-                [interval]="0"
-                [startFromIndex]="5"
-                >
-        <slide *ngFor="let villain of villains; let index=index" class="custom-slide">
-          <div class="content" (click)="selectVillain(villain)">
-            <img class="image" [src]="villain.images.sm" alt="image slide">
-            <h4 class="carousel-caption">{{ villain.name }}</h4>
-          </div>
-        </slide>
-      </carousel>
-    </div>
-</ng-container>
+<div *ngIf="villains.length > 0">
+  <input type="text" placeholder="Search Heroes" [(ngModel)]="searchQuery" (input)="filterVillains()">
+  <ul>
+    <li *ngFor="let villain of filteredVillains">
+      <div (click)="selectVillain(villain)">
+        {{ villain.name }}
+      </div>
+    </li>
+  </ul>
+</div>
