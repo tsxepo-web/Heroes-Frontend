@@ -8,10 +8,12 @@
       <div *ngIf="heroSelected && !villainSelected">
         <h1 class="hero-title">Pick your Villain</h1>
         <h2 class="hero-subtitle">Remember! knowing the Villain's place of birth boost your points. Its not easy beating people in their home turf.</h2>
-        <button [disabled]="!selectedVillain" (click)="verifyVillain()" class="hero-button">Start Battle</button>
+        <button [disabled]="!selectedVillain" (click)="verifyVillain()" class="hero-button">Verify Villain</button>
       </div>
     </div>
 </section>
+<input [(ngModel)]="location" placeholder="Enter City">  
+<button (click)="battle()">Log</button>
   <div>
     <div *ngIf="!heroSelected">
       <app-heroes (heroSelected)="selectHero($event)"></app-heroes>
