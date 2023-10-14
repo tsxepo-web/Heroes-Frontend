@@ -11,6 +11,14 @@ import { HeroesComponent } from './Components/heroes/heroes.component';
 import { VillainsComponent } from './Components/villains/villains.component';
 import { GameComponent } from './Components/game/game.component';
 import { BannerComponent } from './Components/banner/banner.component';
+import { BattleHistoryComponent } from './Components/battle-history/battle-history.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'battle-history',  component: BattleHistoryComponent},
+  {path: '', redirectTo:'/home', pathMatch: 'full'},
+  { path: 'home', component: GameComponent}
+];
 
 @NgModule({
   declarations: [
@@ -19,13 +27,15 @@ import { BannerComponent } from './Components/banner/banner.component';
     FilterHeroesVillainsPipe,
     VillainsComponent,
     GameComponent,
-    BannerComponent
+    BannerComponent,
+    BattleHistoryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

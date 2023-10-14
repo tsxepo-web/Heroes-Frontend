@@ -1,10 +1,10 @@
 <div *ngIf="heroes.length > 0">
-  <input type="text" placeholder="Search Heroes" [(ngModel)]="searchQuery" (input)="filterHeroes()">
-  <ul>
-    <li *ngFor="let hero of filteredHeroes">
-      <div (click)="selectHero(hero)">
-        {{ hero.name }}
-      </div>
-    </li>
-  </ul>
+  <input type="text" placeholder="Search Heroes" [(ngModel)]="searchQuery"
+   (input)="filterHeroes()">
+  <div class="grid-container">
+    <div *ngFor="let hero of filteredHeroes" class="grid-item"
+     (click)="selectHero(hero)">
+      {{ hero.name }}
+    </div>
+  </div>
 </div>

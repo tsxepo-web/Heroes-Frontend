@@ -9,7 +9,6 @@ import { HeroesService } from 'src/app/Services/heroes.service';
 export class HeroesComponent implements OnInit {
   @Output() heroSelected: EventEmitter<any> = new EventEmitter<any>();
   heroes: any[] = [];
-  selectedHero: any = null; 
   searchQuery: string = '';
   filteredHeroes: any[] = [];
 

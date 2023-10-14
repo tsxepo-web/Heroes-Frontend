@@ -1,32 +1,8 @@
 <section class="hero">
     <div class="hero-content">
-      <div *ngIf="!heroSelected">
+      <div>
         <h1 class="hero-title">Pick your Hero</h1>
-        <h2 class="hero-subtitle">Remember! Also the temperature place a major role in slowing people down. Read the Rules for more.</h2>
-        <button [disabled]="!selectedHero" (click)="verifyHero()" class="hero-button">Verify Hero</button>
-      </div>
-      <div *ngIf="heroSelected && !villainSelected">
-        <h1 class="hero-title">Pick your Villain</h1>
-        <h2 class="hero-subtitle">Remember! knowing the Villain's place of birth boost your points. Its not easy beating people in their home turf.</h2>
-        <button [disabled]="!selectedVillain" (click)="verifyVillain()" class="hero-button">Verify Villain</button>
+        <h2 class="hero-subtitle">Remember! The temperature plays a major role in slowing people down. Read the Rules for more.</h2>
       </div>
     </div>
 </section>
-<input [(ngModel)]="location" placeholder="Enter City">  
-<button (click)="battle()">Log</button>
-  <div>
-    <div *ngIf="!heroSelected">
-      <app-heroes (heroSelected)="selectHero($event)"></app-heroes>
-    </div>
-    <div *ngIf="heroSelected && !villainSelected">
-      <p>{{ selectedHero.name }} vs</p>
-      <app-villains (villainSelected)="selectVillain($event)"></app-villains>
-    </div>
-    <div *ngIf="heroSelected && villainSelected" class="battle">
-        <h1>Battle Results</h1>
-      <p>{{ selectedHero.name }} vs {{ selectedVillain.name }}</p>
-        <img [src]="selectedHero.images.sm" alt="Hero Image">
-        <img [src]="selectedVillain.images.sm" alt="Villain Image">
-    </div>
-  </div>
-  
