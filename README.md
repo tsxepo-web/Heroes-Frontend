@@ -24,7 +24,7 @@
 👤 **tsxepo**
 
 - Github: [@tsxepo-web](https://github.com/tsxepo-web)
-- Frontend Url: [TourOfHeroes](https://gentle-desert-01ef55410.3.azurestaticapps.net)
+- Live Url: [TourOfHeroes](https://gentle-desert-01ef55410.3.azurestaticapps.net)
 
 ## Show your support
 
