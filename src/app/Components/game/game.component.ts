@@ -80,10 +80,17 @@ export class GameComponent {
       this.saveBattleDetails();
     });
   }
-
-  refreshGame() {
-    window.location.reload();
+  resetGame() {
+    this.heroSelected = false;
+    this.villainSelected = false;
+    this.battleEnded = false;
+    this.selectedHero = null;
+    this.selectedVillain = null;
+    this.location = '';
+    this.heroScore = 0;
+    this.villainScore = 0;
   }
+  
   saveBattleDetails() {
     const battleDetails = {
       heroName: this.selectedHero.name,

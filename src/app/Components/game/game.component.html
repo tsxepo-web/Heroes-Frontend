@@ -18,6 +18,6 @@
     <div *ngIf="battleEnded" class="battle-end">
         <p class="score">Hero: {{ selectedHero.name }}: {{ heroScore }}</p>
         <p class="score">Villain: {{ selectedVillain.name }}: {{ villainScore }}</p>
-        <button (click)="refreshGame()">Play Again</button>
+        <button (click)="resetGame()">Play Again</button>
     </div>
 </div>
