@@ -1,39 +1,31 @@
-<h1 align="center">Welcome to TourOfHeroes 👋</h1>
+<h1 align="center">Welcome to Heroes 👋</h1>
 <p>
 </p>
 
-![Design]()
+![Design](https://github.com/tsxepo-web/Heroes-Frontend/blob/master/src/assets/Design.drawio.png)
 
-## Tour of the Heroes Frontend
+## Heroes Frontend
 
-- A player chooses a city to battle.
-- The temperature of the city will be used to score the characters based on their powers.
-- Then a player generates random Hero and villain and starts the battle.
-- Azure Static Web App is used to host the frontend.
+- choose your players, hero and villain.
+- choose the city you want the battle to take place and start the game.
+- when done, the battle will be saved in the database, see Battle-History page for more.
+- the points will be awarded based on the rules stipulated bellow:
 
-## Tour of the Heroes Api
-
-- This is the server code used for the fuctionality of the game.
-- Please check the Backend Url to view the code.
-
-## Mongodb
-
-- This is the database of the project used to map the heroes model.
-- Uses cosmosdb to host the data.
-- Please also check the Backend Url for more information.
+* if the choosen city it the same as the hero's, then the hero gets 10 point, and virsa-versa;
+* if the player has higher intelligence, the get 15 points.
+* if the player has more strength, they get 10 points.
+* if the player has more speed but the city temperature is greater than 20 degrees celsius, they loose 5 points.
+* if the player is more durable and the city temperature is less than 10 degrees celsius, they gain 5 points.
+* if the player has more power, they gain 10 points.
+* if the player has more combat and city temperature is greater than 20 degrees celsius, they gain 7 points.
 
 ## Author
 
 👤 **tsxepo**
 
 - Github: [@tsxepo-web](https://github.com/tsxepo-web)
-- Backend Url: [HeroesApi](https://tourofheroesbackendtjabane.azurewebsites.net/api/heroes)
-- Frontend Url: [TourOfHeroes](https://salmon-tree-09b222d00.2.azurestaticapps.net)
+- Frontend Url: [TourOfHeroes](https://gentle-desert-01ef55410.3.azurestaticapps.net)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
