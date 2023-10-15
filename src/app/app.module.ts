@@ -16,8 +16,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'battle-history',  component: BattleHistoryComponent},
-  {path: '', redirectTo:'/home', pathMatch: 'full'},
-  { path: 'home', component: GameComponent}
+  {path: '', redirectTo:'/banner', pathMatch: 'full'},
+  { path: 'banner', component: BannerComponent}
 ];
 
 @NgModule({

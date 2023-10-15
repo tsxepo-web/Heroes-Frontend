@@ -77,9 +77,13 @@ export class GameComponent {
         this.villainScore += 7;
       }
       this.battleEnded = true;
+      this.saveBattleDetails();
     });
   }
 
+  refreshGame() {
+    window.location.reload();
+  }
   saveBattleDetails() {
     const battleDetails = {
       heroName: this.selectedHero.name,

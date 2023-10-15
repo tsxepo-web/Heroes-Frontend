@@ -1,4 +1,14 @@
-.battle {
-    background-color: black;
-    color: white;
+button {
+    background-color: #0d2914;
+    color: #fff;
+} 
+button:hover {
+    background-color: #4CAF50;
+}
+.battle-names {
+    color: rgb(164, 161, 161);
+}
+
+.score {
+    color: rgb(189, 158, 3);
 }

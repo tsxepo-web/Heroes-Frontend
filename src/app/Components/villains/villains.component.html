@@ -1,5 +1,5 @@
 <div *ngIf="villains.length > 0">
-  <input type="text" placeholder="Search Heroes" [(ngModel)]="searchQuery"
+  <input type="text" placeholder="Search Villain" [(ngModel)]="searchQuery"
    (input)="filterVillains()">
   <div class="grid-container">
     <div *ngFor="let villain of filteredVillains" class="grid-item"

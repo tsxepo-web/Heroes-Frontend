@@ -1,10 +1,22 @@
-<div *ngFor="let battle of battles">
-    <h2>Battle Details</h2>
-    <p>Hero: {{ battle.heroName }}</p>
-    <p>Villain: {{ battle.villainName }}</p>
-    <p>Location: {{ battle.location }}</p>
-    <p>Battle Time: {{ battle.battleTime }}</p>
-    <p>Hero Score: {{ battle.heroScore }}</p>
-    <p>Villain Score: {{ battle.villainScore }}</p>
-  </div>
-  
+<table *ngIf="battles && battles.length > 0" class="battle-details">
+  <thead>
+    <tr>
+      <th>Hero</th>
+      <th>Villain</th>
+      <th>Location</th>
+      <th>Battle Time</th>
+      <th>Hero Score</th>
+      <th>Villain Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let battle of battles">
+      <td>{{ battle.heroName }}</td>
+      <td>{{ battle.villainName }}</td>
+      <td>{{ battle.location }}</td>
+      <td>{{ battle.battleTime | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+      <td>{{ battle.heroScore }}</td>
+      <td>{{ battle.villainScore }}</td>
+    </tr>
+  </tbody>
+</table>
