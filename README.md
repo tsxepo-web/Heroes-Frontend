@@ -1,27 +1,39 @@
-# Heroes
+<h1 align="center">Welcome to TourOfHeroes 👋</h1>
+<p>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+![Design]()
 
-## Development server
+## Tour of the Heroes Frontend
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- A player chooses a city to battle.
+- The temperature of the city will be used to score the characters based on their powers.
+- Then a player generates random Hero and villain and starts the battle.
+- Azure Static Web App is used to host the frontend.
 
-## Code scaffolding
+## Tour of the Heroes Api
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- This is the server code used for the fuctionality of the game.
+- Please check the Backend Url to view the code.
 
-## Build
+## Mongodb
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- This is the database of the project used to map the heroes model.
+- Uses cosmosdb to host the data.
+- Please also check the Backend Url for more information.
 
-## Running unit tests
+## Author
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+👤 **tsxepo**
 
-## Running end-to-end tests
+- Github: [@tsxepo-web](https://github.com/tsxepo-web)
+- Backend Url: [HeroesApi](https://tourofheroesbackendtjabane.azurewebsites.net/api/heroes)
+- Frontend Url: [TourOfHeroes](https://salmon-tree-09b222d00.2.azurestaticapps.net)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Show your support
 
-## Further help
+Give a ⭐️ if this project helped you!
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
